@@ -65,13 +65,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 [_ADJUST] = LAYOUT(
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        RESET,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RGB_TOG,                KC__MUTE,    XXXXXXX,    KC_7,          KC_8,          KC_9,       XXXXXXX,     
+        RESET,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RGB_TOG,                KC__MUTE,  ALGR(KC_MINS),    KC_7,          KC_8,          KC_9,       XXXXXXX,     
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        XXXXXXX,        RGB_HUI,    RGB_SAI,    RGB_VAI,    RGB_SPI,    RGB_MOD,                KC__VOLUP,   XXXXXXX,    KC_4,          KC_5,          KC_6,       XXXXXXX,      
+        XXXXXXX,        RGB_HUI,    RGB_SAI,    RGB_VAI,    RGB_SPI,    RGB_MOD,                KC__VOLUP,       XXXXXXX,    KC_4,          KC_5,          KC_6,       XXXXXXX,      
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        XXXXXXX,        RGB_HUD,    RGB_SAD,    RGB_VAD,    RGB_SPD,    XXXXXXX,                KC__VOLDOWN, XXXXXXX,    KC_1,          KC_2,          KC_3,       XXXXXXX,  
+        XXXXXXX,        RGB_HUD,    RGB_SAD,    RGB_VAD,    RGB_SPD,    XXXXXXX,                KC__VOLDOWN,        KC_0,    KC_1,          KC_2,          KC_3,       XXXXXXX,  
     //---------+--------+--------+--------+--------+--------------+-------------------|   |--------+---------+--------+--------+--------+--------+---------------------------------|
-                                                      KC_LGUI,    KC_TRNS,    KC_SPC,        KC_SPC,    KC_TRNS,  KC_0
+                                                      KC_LGUI,    KC_TRNS,    KC_SPC,        KC_SPC,    KC_TRNS,  KC_RALT
                                                   //|---------------------------------|   |---------------------------------|
     )};
 
