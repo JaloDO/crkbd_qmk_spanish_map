@@ -29,7 +29,7 @@ enum custom_keycodes { QWERTY = SAFE_RANGE, LOWER, RAISE, ADJUST, MACRO1, MACRO2
 enum { TD_PC, TD_COMI, TD_SLA, TD_CAPLOCK, TD_ALT, TD_A, TD_B, TD_C, TD_D, TD_E, TD_F, TD_G, TD_H, TD_I, TD_J, TD_K, TD_L, TD_M, TD_N, TD_O, TD_P, TD_Q, TD_R, TD_S, TD_T, TD_U, TD_V, TD_W, TD_X, TD_Y, TD_Z, TD_PLUS };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-[_QWERTY] = LAYOUT(
+[_QWERTY] = LAYOUT_split_3x6_3(
     //|----------------------------------------------------------------------------|          |--------------------------------------------------------------------------------------|
         KC_TAB,         KC_Q,       KC_W,       KC_E,       KC_R,       KC_T,                   KC_Y,       KC_U,       KC_I,           KC_O,           KC_P,       KC_BSPC,
     //|----------------------------------------------------------------------------|          |--------+--------+--------+--------+--------+-----------------------------------------|
@@ -52,7 +52,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                       KC_LGUI,      KC_TRNS,  KC_SPC,        KC_SPC,    RAISE,      KC_RALT
                                                   //|---------------------------------|   |---------------------------------|
     ),
-[_RAISE] = LAYOUT(
+[_RAISE] = LAYOUT_split_3x6_3(
     //|----------------------------------------------------------------------------|         |--------------------------------------------------------------------------------------|
         KC_ESC,         KC_EXLM,    KC_AT,      KC_HASH,    KC_DLR,     KC_PERC,                KC_CIRC,    KC_AMPR,    KC_ASTR,        KC_LPRN,        KC_RPRN,     KC_DEL,
     //|----------------------------------------------------------------------------|         |--------------------------------------------------------------------------------------|
@@ -63,20 +63,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                       KC_LGUI,      LOWER,    KC_SPC,        KC_SPC,    KC_TRNS,    KC_RALT
                                                   //|---------------------------------|   |---------------------------------|
     ),
-[_ADJUST] = LAYOUT(
+[_ADJUST] = LAYOUT_split_3x6_3(
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        RESET,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RGB_TOG,                KC__MUTE,  ALGR(KC_MINS),    KC_7,          KC_8,          KC_9,       XXXXXXX,     
+        QK_BOOT,          XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    RGB_TOG,                KC_MUTE,  ALGR(KC_MINS),    KC_7,          KC_8,          KC_9,       XXXXXXX,     
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        XXXXXXX,        RGB_HUI,    RGB_SAI,    RGB_VAI,    RGB_SPI,    RGB_MOD,                KC__VOLUP,       XXXXXXX,    KC_4,          KC_5,          KC_6,       XXXXXXX,      
+        XXXXXXX,        RGB_HUI,    RGB_SAI,    RGB_VAI,    RGB_SPI,    RGB_MOD,                KC_VOLU,       XXXXXXX,    KC_4,          KC_5,          KC_6,       XXXXXXX,      
     //|----------------------------------------------------------------------------|         |-------------------------------------------------------------------------------------|
-        XXXXXXX,        RGB_HUD,    RGB_SAD,    RGB_VAD,    RGB_SPD,    XXXXXXX,                KC__VOLDOWN,        KC_0,    KC_1,          KC_2,          KC_3,       XXXXXXX,  
+        XXXXXXX,        RGB_HUD,    RGB_SAD,    RGB_VAD,    RGB_SPD,    XXXXXXX,                KC_VOLD,        KC_0,    KC_1,          KC_2,          KC_3,       XXXXXXX,  
     //---------+--------+--------+--------+--------+--------------+-------------------|   |--------+---------+--------+--------+--------+--------+---------------------------------|
                                                       KC_LGUI,    KC_TRNS,    KC_SPC,        KC_SPC,    KC_TRNS,  KC_RALT
                                                   //|---------------------------------|   |---------------------------------|
     )};
 
 // Tap Dance definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
+tap_dance_action_t tap_dance_actions[] = {
     // Tap once for ;, twice for :
     [TD_PC] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, LSFT(KC_SCLN)), 
     [TD_COMI] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, LSFT(KC_QUOT)), 
