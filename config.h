@@ -20,7 +20,7 @@
 //#define RETRO_TAPPING
 //#define IGNORE_MOD_TAP_INTERRUPT
 
-#define OLED_FONT_H "keyboards/crkbd/keymaps/mmaragan/glcdfont.c"
+#define OLED_FONT_H "keyboards/crkbd/keymaps/{your_username}/glcdfont.c"
 // #define OLED_FONT_WIDTH 5
 // #define OLED_FONT_HEIGHT 7
 
